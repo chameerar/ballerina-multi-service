@@ -1,7 +1,8 @@
 import ballerina/io;
 import ballerina/http;
 
-service / on new http:Listener(8090) {
+listener http:Listener serviceListener = new http:Listener(8090);
+service / on serviceListener {
 
     resource function get .() returns string {
         io:println("Hello from 9190");
@@ -26,5 +27,4 @@ service / on new http:Listener(8090) {
 //         return "Hello from 9195";
 //     }
 // }
-
 
