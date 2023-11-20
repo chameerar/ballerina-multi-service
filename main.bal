@@ -2,7 +2,7 @@ import ballerina/io;
 import ballerina/http;
 
 listener http:Listener serviceListener = new http:Listener(8090);
-service /one on serviceListener {
+service / on serviceListener {
 
     resource function get .() returns string {
         io:println("Hello from one");
@@ -15,18 +15,18 @@ service /one on serviceListener {
     }
 }
 
-service /two on serviceListener {
+// service /two on serviceListener {
 
-    resource function get .() returns string {
-        io:println("Hello from two");
-        return "Hello from two";
-    }
+//     resource function get .() returns string {
+//         io:println("Hello from two");
+//         return "Hello from two";
+//     }
 
-    resource function post .() returns string {
-        io:println("Hello from one");
-        return "Hello from two";
-    }
-}
+//     resource function post .() returns string {
+//         io:println("Hello from one");
+//         return "Hello from two";
+//     }
+// }
 
 // service / on new http:Listener(9195) {
 
