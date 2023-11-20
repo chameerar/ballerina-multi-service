@@ -15,6 +15,19 @@ service / on serviceListener {
     }
 }
 
+service /two on serviceListener {
+
+    resource function get .() returns string {
+        io:println("Hello from two");
+        return "Hello from two";
+    }
+
+    resource function post .() returns string {
+        io:println("Hello from two");
+        return "Hello from two";
+    }
+}
+
 // service /two on serviceListener {
 
 //     resource function get .() returns string {
